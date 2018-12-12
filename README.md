@@ -10,3 +10,6 @@ cd dist		-> Change directory to dist folder
 
 node app.js	-> Run the node application
 
+Please refer below link for details explanation
+
+http://hive.rinoy.in/typeorm-express-application-using-repository-pattern/
