@@ -14,7 +14,7 @@ export class OrderEntity {
     @Column({ name: "Address", length: 200 })
     address: string;
 
-    @OneToMany(type => OrderDetailsEntity, order_details => order_details.order)
+    @OneToMany(type => OrderDetailsEntity, order_details => order_details.order, { cascade: true })
     order_details: OrderDetailsEntity[];
 
     @ManyToOne(type => UserEntity, user => user.orders)

@@ -43,6 +43,7 @@ app.delete("/DeleteProduct", productController.deleteProduct);
 app.get("/GetAllOrders", orderController.getAllOrders);
 app.post("/SaveOrder", orderController.saveOrder);
 app.delete("/DeleteOrder", orderController.deleteOrder);
+app.post("/SaveOrder_Cascade", orderController.saveOrder_Cascade);
 
 /**
  * Create connection to DB using configuration provided in 
