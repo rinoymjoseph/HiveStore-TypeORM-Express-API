@@ -4,13 +4,13 @@ import { UserEntity } from "../entities/user-entity";
 import { UserRepo } from "../repositories/user-repository";
 import { BaseResponse } from "../base-response";
 
-export let getAllUsers = (req: Request, res: Response) => {
+export let getAllUsers = async (req: Request, res: Response) => {
   console.log("GET => GetAllUsers");
   let userRepo : UserRepo = new UserRepo();
   let baseResponse : BaseResponse = new BaseResponse();
 
   try{
-    let users = userRepo.getAllusers();
+    let users = await userRepo.getAllusers();
     baseResponse.isSuccess = true;
     baseResponse.response = JSON.stringify(users);
   }

@@ -8,6 +8,8 @@ import * as appConfig from "./app.config";
  * Controllers (route handlers).
  */
 import * as userController from "./controllers/user-controller";
+import * as productController from "./controllers/product-controller";
+import * as orderController from "./controllers/order-controller";
 
 /**
  * Create Express server.
@@ -35,6 +37,12 @@ app.listen(app.get("port"), () => {
 app.get("/GetAllUsers", userController.getAllUsers);
 app.post("/SaveUser", userController.saveUser);
 app.delete("/DeleteUser", userController.deleteUser);
+app.get("/GetAllProducts", productController.getAllProducts);
+app.post("/SaveProduct", productController.saveProduct);
+app.delete("/DeleteProduct", productController.deleteProduct);
+app.get("/GetAllOrders", orderController.getAllOrders);
+app.post("/SaveOrder", orderController.saveOrder);
+app.delete("/DeleteOrder", orderController.deleteOrder);
 
 /**
  * Create connection to DB using configuration provided in 

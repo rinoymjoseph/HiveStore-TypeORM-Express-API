@@ -14,7 +14,7 @@ export class OrderDetailsEntity {
     @Column({ name: "Quantity", type: "smallint" })
     quantity: number;
 
-    @Column({ name: "Discount", type: "decimal", precision: 2, scale: 2, nullable: true })
+    @Column({ name: "Discount", type: "decimal", precision: 4, scale: 2, nullable: true })
     discount: number;
 
     @ManyToOne(type => OrderEntity, order => order.order_details)
